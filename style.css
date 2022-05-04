@@ -1,0 +1,408 @@
+body {
+    font-size:100%;
+    width:100vw;
+    height:100vh
+}
+div#id1 {
+    max-width: 500px;
+    min-width: 300px;
+    border:1px solid red;
+    padding:50px 20px 50px 20px;
+    box-sizing:border-box;
+    background-color: aquamarine;
+    margin:auto;
+  
+}
+/* div p {
+    border:1px solid black;
+    margin-top:0px;
+    outline:10px dotted red;
+    outline-offset:5px;
+    text-align: left;
+    /* text-align-last: left; */
+    /* direction:rtl;
+    unicode-bidi:bidi-override; */
+    text-decoration:line-through red dotted;
+    text-transform: capitalize;
+    text-indent:50px;
+    letter-spacing:0px;
+    /* line-height:10px; */
+    white-space:normal;
+    text-shadow:0 0 5px red,0 0 5px green;
+    font-family: Sofia, Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight:bold;
+    font-variant:small-caps;
+    font-size:1em;
+} */
+
+img#ins {
+    vertical-align: super;
+}
+
+/* h1 {
+    font-family: Trirong, Arial, Helvetica, sans-serif;
+} */
+p#id2 {
+    font:small-caps italic bold 1em/50px Monospace;
+}
+
+/* a:link, a:visited {
+    display: inline-block;
+    padding:20px;
+    background-color: blanchedalmond;
+    font-size: 30px;
+    color:blue;
+    text-decoration: none;
+    border:2px solid red;
+}
+
+a:hover, a:active {
+    font-size:50px;
+    color:brown;
+    cursor:cell;
+} */
+
+/* ul {
+    background-color: antiquewhite;
+   list-style: square inside url("/src/img/instgram.svg");
+}
+
+
+ul>li li:nth-child(odd){
+    list-style-type:none;
+    
+} */
+table {
+    border:1px solid grey;
+    font-size: 2rem;
+    width:130vw;
+    border-collapse: collapse;
+}
+table th, td{
+    border-bottom:1px solid grey;
+    padding:10px;
+    text-align: left;
+}
+table th {
+    background-color: aqua;
+}
+table tr:nth-child(even) {
+    background-color: rgb(200, 197, 197);
+}
+
+table tr:hover {
+    background-color: rgb(225, 14, 14);
+    cursor:grab
+}
+
+div.table1 {
+    overflow-x: auto;
+}
+
+div#panel {
+    text-align: center;
+    background-color: aquamarine;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 1px solid grey;
+}
+div#panel:hover{
+    cursor:default;
+    color:brown;
+}
+
+div#panelcon {
+    background-color:aquamarine;
+    font-size: 30px;
+    text-align: center;
+    padding:50px 20px;
+
+}
+div.test {
+    border: 1px solid black;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin:auto;
+}
+div.b0 {
+    background-color: aquamarine;
+    height:100vh;
+}
+
+div.b1, div.b2 ,div.b3, div.b4 {
+    border:1px solid black;
+    height:20px;
+    margin: 10px auto;
+    width:20px;
+    background-color: aqua;
+}
+
+div.b1 {
+    position:static;
+}
+
+div.b2 {
+    position:relative;
+    top:10px;
+    left:20px;
+}
+
+div.b3 {
+    position:absolute;
+    top:50px;
+    left:50px;
+    background-color:red;
+}
+
+div.b4 {
+    position:absolute;
+    top:0px;
+}
+
+div#id2 {
+    background-color: antiquewhite;
+    font-size: 20px;
+    margin:auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div#id2 img {
+    height: 50px;
+    float: left;
+}
+
+div.div1, .div2, .div3, .div4 {
+    border:1px solid black;
+}
+div.div1, .div3 {
+    float:left;
+    padding:10px;
+    width:40px;
+}
+
+.div3 {
+    float:right
+}
+div.div2, .div4 {
+    clear:both;
+    
+}
+/* div img {
+    float:right;
+    height:500px;
+    display: table;
+} */
+.div4::after {
+    content:"";
+    display:table;
+    clear:both;
+
+}
+
+div.clearfix::after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.box {
+    background-color: grey;
+    width:33%;
+    float:left;
+    border:1px solid black;
+    box-sizing: border-box;
+    margin:2px;
+    padding:10px;
+    height:300px;
+}
+img {
+    width:100%;
+}
+
+div.flexboss{
+    width:50%;
+    height:50%;
+    margin:auto;
+    background-color: antiquewhite;
+    border:1px solid black;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content:space-around;
+    align-items: center;
+    overflow: scroll;
+    
+}
+div.flexboss div {
+    border:1px solid black;
+    background-color: blueviolet;
+    padding:20px;
+    color:white;
+}
+.flex4 {
+    order: -1;
+}
+
+div.header {
+    background-color: black;
+    clear:both;
+}
+div.header::after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+div.header div{
+    float:left;
+    padding:10px;
+    background-color: black;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+div.header div:hover{
+    background-color: brown;
+}
+
+div.hf {
+    background-color: grey;
+    color:white;
+    font-weight: bold;
+    font-size: 30px;
+    height:15vh;
+    padding:15px;
+}
+
+div.he div{
+    float:left;
+    height:230px;
+    width:50%;
+}
+
+div.he {
+    display: table;
+    content:"";
+    clear:both;
+}
+
+div.he li{
+    background-color: aqua;
+    margin:10px;
+    list-style-type: none;
+    width:20%;
+    color:white;
+    padding:10px;
+}
+
+
+
+div.ce {
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.absolute {
+    position:sticky;
+    top:100px;
+    left:100%;
+    width:300px;
+    padding:10px;
+    border:1px solid red;
+}
+
+div.center {
+    display: flex;
+    height:500px;
+    align-items: center;
+    justify-content: space-evenly;
+    border:3px solid green;
+
+}
+div.center p {
+    text-align: justify;
+    padding:10px;
+}
+
+div.sel p {
+    background-color: yellow;
+}
+div.sel>div~p {
+    background-color: blue;
+}
+div.persudo p{
+    display:none
+}
+div.persudo:hover p{
+    display:block;
+    background-color: yellow;
+    padding:20px;
+}
+p.pers::selection{
+    background-color: red;
+    color:yellow;
+}
+
+div.hover img {
+    width:30%;
+    padding:10px;
+    opacity:0.5;
+}
+
+div.hover img:hover {
+    opacity: 1;
+}
+
+div.back {
+    background-image: url("/src/img/ligthdim.jpg");
+    background-size: 100px ;
+    background-repeat:auto;
+    padding:50px;
+}
+div.back div {
+    background-color: aqua;
+    opacity: 0.5;
+    border:3px solid red;
+    text-align: center;
+    padding:10px;
+}
+
+ul.nav {
+    list-style-type: none;
+    background-color: blue;
+    padding: 0;
+    margin:0;
+    max-width:300px;
+}
+
+ul.nav::after {
+    content:"";
+    clear:both;
+    display: table;
+    
+}
+ul.nav li {
+    height:50px;
+    color:white;
+    text-align: center;
+    font-family: monospace;
+    line-height: 50px;
+    
+}
+
+ul.nav li a {
+    display: inline-block;
+    height:100%;
+    width:100%;
+}
+ul.nav li a:visited, a:link {
+    color:white;
+    
+}
+ul.nav li a:hover, a:active{
+    background-color:blueviolet;
+    
+}
