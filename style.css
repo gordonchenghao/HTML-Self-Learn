@@ -2,6 +2,8 @@ body {
     font-size:100%;
     width:100vw;
     height:100vh
+    padding:0px;
+    margin:0px;
 }
 div#id1 {
     max-width: 500px;
@@ -375,7 +377,6 @@ ul.nav {
     background-color: blue;
     padding: 0;
     margin:0;
-    max-width:300px;
 }
 
 ul.nav::after {
@@ -390,13 +391,16 @@ ul.nav li {
     text-align: center;
     font-family: monospace;
     line-height: 50px;
-    
+    float:left;
+    display:inline-block;
+    width:20%;
 }
 
 ul.nav li a {
     display: inline-block;
     height:100%;
     width:100%;
+    text-decoration: none;
 }
 ul.nav li a:visited, a:link {
     color:white;
@@ -405,4 +409,87 @@ ul.nav li a:visited, a:link {
 ul.nav li a:hover, a:active{
     background-color:blueviolet;
     
+}
+
+div.dropdown {
+    display: block;
+    width:500px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    position:relative;
+}
+
+div.dropdown::after {
+    content:"";
+    clear:both;
+    display: table;
+}
+
+div.menu {
+    width:100%;
+    background-color: rgb(6, 205, 105);
+    color:white;
+    text-align: center;
+    height:50px;
+    line-height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+div.dropdowncontent {
+    display:none;
+}
+
+div.dropdown:hover .dropdowncontent{
+    display:block;
+}
+
+div.dropdowncontent a{
+    display:block;
+    width:100%;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    background-color: azure;
+}
+
+div.dropdowncontent a:hover, a:active{
+    background-color: blanchedalmond;
+}
+
+div.dropimg{
+    position:relative;
+    width:10vw;
+}
+
+div.dropimg>div {
+    display:none;
+    width:30vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+div.dropimg:hover div{
+    display: block;
+}
+
+div.caption {
+    text-align: center;
+    padding:20px;
+}
+
+div.gallery {
+    width:180px;
+    border:1px solid rgba(190, 187, 187,0.5);
+    float: left;
+    margin:20px;
+}
+
+div.gallery div {
+    padding:10px 2px;
+    text-align: center;
+}
+
+div.gallery:hover {
+    border:1px solid #777;
 }
