@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>JS output</p>
+    <button onclick="myfun()">show it</button>
+    <span id="demo"></span>
+    <br />
+    <button onclick="document.write(5+6)">wipe the window</button>
+    <br />
+    <button onclick="window.alert('this is alert')" style="display: block">
+      see the alert
+    </button>
+    <button onclick="window.print()">print</button>
+    <br />
+    <button onclick="console.log('this is my log')">console log</button>
+    <p id="demo2"></p>
+    <script>
+      let x, y, z;
+      x = 5;
+      y = 6;
+      z = x + y;
+      document.getElementById("demo2").innerHTML =
+        "The value of z is" + " " + z;
+    </script>
+    <p id="demo3"></p>
+    <script>
+      const price1 = 40,
+        price2 = 100;
+      let total = price1 + price2;
+      document.getElementById("demo3").innerHTML =
+        "The total price is" + " " + total;
+    </script>
+
+    <script>
+      var k = 1;
+
+      {
+        var k = 0;
+      }
+      document.write(k);
+    </script>
+    <br />
+    <script>
+      m = "JS Hoisting";
+      var meta;
+      // let m
+      document.write(m);
+    </script>
+    <br />
+    <script>
+      const car = ["Saab", "Volvo", "BMW"];
+
+      car[0] = "Subaru";
+
+      car.push("Audi");
+
+      document.write(car);
+    </script>
+    <br />
+    <script>
+      const car2 = { type: "car", model: "500", color: "white" };
+      car2.color = "red";
+      car2.owner = "Johnson";
+      document.write(car2.color, " ", car2.owner);
+    </script>
+    <br />
+    <script>
+      let x1 = 16 + 4 + "hello";
+      let x2 = "hello" + 16 + 4;
+      document.write(x1, "<br>", x2);
+    </script>
+    <br />
+    <br />
+    <script>
+      let q = 123;
+      q = undefined;
+      document.write(
+        typeof 123 +
+          "<br>" +
+          typeof "John" +
+          "<br>" +
+          typeof [1, 2, 3, 4] +
+          "<br>" +
+          typeof { type: 1 } +
+          "<br>" +
+          typeof q +
+          "<br>" +
+          typeof true
+      );
+    </script>
+    <br />
+    <script>
+      document.write(toCelsius(52));
+    </script>
+    <br />
+    <script>
+      const person = {
+        fname: "Gordon",
+        lname: "Gao",
+        id: 743067,
+        fullname: function () {
+          return this.fname + " " + this.lname;
+        },
+      };
+      document.write(person.fullname());
+    </script>
+    <br />
+    <button onclick="this.innerHTML='it\'s changed'">change me</button>
+    <br />
+    <button onclick="displayDate()">The time is?</button>
+    <span id="time"></span>
+    <br />
+    <script>
+      let text = "asdfjongseojnv";
+      document.write('the length of "' + text + '" is ' + text.length);
+    </script>
+    <br />
+    <script>
+      let y1 = "John";
+      let y2 = new String("John");
+      document.write(y1 == y2);
+      document.write("<br>" + (y1 === y2)); //not the same type
+    </script>
+    <br />
+    <script>
+      let str = "Apple, Banana, kiwi, Banana";
+      document.write(str.slice(7, 13) + "<br>");
+      document.write(str.substring(7, 13) + "<br>"); //difference with slice it that all negative index equal to zero
+      document.write(str.substr(7, 6) + "<br>"); //second args indicate the length of the substring
+      document.write(str.replace("Banana", "Pear") + "<br>");
+      document.write(str.replace(/apple/i, "Grape") + "<br>"); //use /keyword/i to repalce a keyword case insensitive
+      document.write(str.replace(/Banana/g, "Pear")); //use /keyword/g to replace all match
+    </script>
+    <br />
+    <script>
+      let text1 = "Hello World!";
+      let text2 = "the second part";
+      let text3 = "     ......spacy.....      ";
+      document.write(text1.toUpperCase() + "<br>");
+      document.write(text1.toLowerCase() + "<br>");
+      document.write(text1.concat(" ", text2, " !") + "<br>");
+      document.write(text3.trim() + "<br>");
+      document.write(text1.padStart(14, "*") + "<br>");
+      document.write(text1.padEnd(14, "*") + "<br>");
+      document.write(text1[4] + "<br>"); // better not use it, cause confusion, becasue str[] is read only, you can use str[]=something to modify it
+      document.write(text1.charAt(4) + "<br>");
+      document.write(text1.charCodeAt(4) + "<br>"); //charCodeAt() return the UTF-16 code of that character
+      document.write(text1.split(" ")); // convert into array
+    </script>
+    <br />
+    <script>
+      let str2 = "Please locate where 'locate' occurs!";
+      document.write(str2.indexOf("locate") + "<br>");
+      document.write(str2.lastIndexOf("locate") + "<br>");
+      document.write(str2.indexOf("location") + "<br>"); //return -1 if it is not found in the text
+      document.write(str2.indexOf("locate", 22) + "<br>"); //second args as the starting position of the search
+      document.write(str2.lastIndexOf("locate", 5) + "<br>"); //lastIndexOf seaches backwards (search start at 5 to the beginning, that's why it is -1)
+      document.write(str2.search("locate")); // for search() like the indexOf(), but it cannot specify the starting point
+    </script>
+    <br />
+    <script>
+      let text3 = "The rain in SPAIN stays mainly in the plain";
+      document.write(text3.match(/ain/g) + "<br>"); //match() method searchs a string  for a match against a regular expression, and the reuturns the matches as an array
+      document.write(text3.match(/ain/gi) + "<br>"); //perform a global, caseinsensetive search
+    </script>
+    <br />
+    <script>
+      let text4 = "Hello world, welcom to the universe.";
+      document.write(text4.includes("Hello") + "<br>");
+      document.write(text4.includes("Hello", 5) + "<br>"); // specify starting point
+      document.write(text4.startsWith("Hello") + "<br>");
+      document.write(text4.endsWith("Hello") + "<br>");
+    </script>
+    <br />
+    <script>
+      let temp = `Hello World!`;
+      let temp1 = `He's often called "Johnny"`; //can contain '' and ""
+      let temp2 = `The quick
+                    brown fox
+                    jumps over
+                    the lazy dog`; // can hold multilines
+      let firstname = "Gordon",
+        lastname = "Gao";
+      document.write(`Welcome ${firstname} ${lastname}`); //text interpolation
+      document.write(`Total: ${(10 * 1.25).toFixed(2)}`);
+    </script>
+    <br />
+    <script>
+      let header = "Templates Litterals";
+      let tags = ["template literals", "javascript", "es6"];
+      let html = `<h2>${header}</h2><ul>`;
+      for (const i of tags) {
+        html += `<li>${i}</li>`;
+      }
+      html += `</ul>`;
+      document.write(html);
+    </script>
+    <br /><br />
+    <script>
+      document.write((0.1 + 0.1).toFixed(17) + "<br>"); //floating value is not always accurate
+      document.write("100" / "A" + "<br>"); // give NaN:not a number
+      let powerit = 2;
+      while (powerit != Infinity) {
+        powerit *= powerit;
+      }
+      document.write(powerit + "<br>");
+    </script>
+    <br />
+    <script>
+      let num1 = 123,
+        num2 = 9.656;
+      document.write(typeof num1.toString() + "<br>");
+      document.write(num2.toExponential(2) + "<br>");
+      document.write(num2.toFixed(1) + "<br>");
+      document.write(num2.toPrecision(6) + "<br>"); //specify the length of the num
+      document.write(
+        "<br>" +
+          Number(true) +
+          "<br>" +
+          Number(false) +
+          "<br>" +
+          Number("10") +
+          "<br>" +
+          Number("  10") +
+          "<br>" +
+          Number("10  ") +
+          "<br>" +
+          Number(" 10  ") +
+          "<br>" +
+          Number("10.33") +
+          "<br>" +
+          Number("10,33") +
+          "<br>" +
+          Number("10 33") +
+          "<br>" +
+          Number("John") +
+          "<br>"
+      );
+      document.write(Number(new Date("2022-05-27")) + "<br>"); //Number() methid returns the number of milliseconds since 1970/01/01
+      document.write(
+        "<br>" +
+          parseInt("-10") +
+          "<br>" +
+          parseInt("-10.33") +
+          "<br>" +
+          parseInt("10") +
+          "<br>" +
+          parseInt("10.33") +
+          "<br>" +
+          parseInt("10 6") +
+          "<br>" +
+          parseInt("10 years") +
+          "<br>" +
+          parseInt("years 10") +
+          "<br>"
+      ); //parseInt() parses a string and returns a whole number, only the first number is returned.
+      document.write(
+        "<br>" +
+          parseFloat("10") +
+          "<br>" +
+          parseFloat("10.33") +
+          "<br>" +
+          parseFloat("10 6") +
+          "<br>" +
+          parseFloat("10 years") +
+          "<br>" +
+          parseFloat("years 10") +
+          "<br>"
+      ); //parseFloat() parses a string and returns a number. Space are allowed, only the first number is returned
+    </script>
+    <br />
+    <script>
+      document.write(Number.MAX_VALUE + "<br>");
+      document.write(Number.MIN_VALUE + "<br>");
+      document.write(Number.POSITIVE_INFINITY + "<br>");
+      document.write(Number.NEGATIVE_INFINITY + "<br>");
+    </script>
+    <br />
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits.length + "<br>");
+      document.write(fruits.sort() + "<br>");
+      document.write(fruits[0] + "<br>");
+      document.write(fruits[fruits.length - 1] + "<br>");
+      //looping array method 1
+      let content = `<ul>`;
+      for (let p of fruits) {
+        content += `<li>${p}</li>`;
+      }
+      content += `</ul>`;
+      document.write(content);
+      //looping array method 2 using forEach()
+      let content2 = `<ul>`;
+      fruits.forEach(listIt);
+      function listIt(value) {
+        content2 += `<li>${value}</li>`;
+      }
+      content2 += `</ul>`;
+      document.write(content2);
+    </script>
+    <br /><br />
+    <script>
+      document.write(Array.isArray(fruits) + "<br>");
+      document.write(fruits.toString() + "<br>"); //convert array to string
+      document.write(fruits.join("*") + "<br>" + "<br>"); // also convert a array to string, but join() can define the separator
+
+      /////////////////
+
+      //method dealing with the last element
+      fruits.pop(); //return the value that's been pop out
+      document.write(fruits + "<br>"); //pop out the last one
+      fruits.push("Grape");
+      document.write(fruits + "<br>" + "<br>"); //push a new value in the array
+
+      //method dealing with the first element
+      const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+      shiftout = fruits2.shift();
+      document.write(shiftout + "<br>");
+      document.write(fruits2 + "<br>");
+      document.write(fruits2.unshift("Lemon") + "<br>"); //retrun the new length
+      document.write(fruits2); // adding a new element at the beginning
+    </script>
+    <br /><br />
+    <script>
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+
+      const myChildren = myGirls.concat(myBoys);
+      document.write(myChildren); // concate don't change the exsiting array, only resturn a new array
+    </script>
+    <br /><br />
+    <script>
+      //splice
+      const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+      fruits3.splice(2, 0, "Lemon", "Kiwi"); // first arg position new element, second arg num of element will be remove
+      document.write(fruits3 + "<br>" + "<br>");
+      const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+      fruits4.splice(0, 1); //splice() can be used to remove element without leaving a hole
+      document.write(fruits4 + "<br>" + "<br>");
+
+      //slice
+      const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(fruits5.slice(1, 3) + "<br>");
+    </script>
+  </body>
+</html>

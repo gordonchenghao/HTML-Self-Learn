@@ -14,6 +14,16 @@
 </head>
 
 <body>
+    <p id="demo2" style="display:inline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quis?</p>
+    <button onclick='document.getElementById("demo2").style.display="block"'>big</button>
+
+    <button onclick='document.getElementById("light").src="/src/img/lightbright.jpg"'>on</button>
+
+    <img id="light" src="/src/img/ligthdim.jpg" alt="" style="width:200px">
+
+    <button onclick='document.getElementById("light").src="/src/img/ligthdim.jpg"'>off</button>
+    <p id="demo1">heheheh</p>
+    <button type="button" onclick='document.getElementById("demo1").innerHTML = "Hello"'>Click me</button>
     <div class="gallery">
         <a href="/src/img/coffee.jpg" target="_blank"><img src="/src/img/coffee.jpg" alt="coffee"></a>
         <div class="desc">Add a description of the image here</div>

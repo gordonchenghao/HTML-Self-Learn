@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gary: #303841;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: var(--main-red);
+  width: 100%;
+}
+
+#navbar ul {
+  display: flex;
+  list-style-type: none;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: var(--main-white);
+  display: inline-block;
+  padding: 1em;
+  font-weight: 500;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+#navbar a:hover {
+  background-color: var(--main-gary);
+}
+
+#welcome-section {
+  background-color: var(--main-gary);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section h1 {
+  color: var(--main-white);
+  font-size: 4em;
+  font-weight: 700;
+}
+
+#welcome-section h3 {
+  font-size: 3em;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+
+#projects {
+  background-color: var(--main-blue);
+  padding-bottom: 6em;
+}
+
+.project_title {
+  color: var(--main-white);
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  max-width: 640px;
+  border-bottom: 0.2rem solid var(--main-white);
+  font-weight: 700;
+  padding: 1em;
+}
+.project_gallary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  max-width: 1280px;
+  margin: 0 auto 2em auto;
+}
+
+.gallery {
+  margin: 20px;
+  width: 350px;
+  display: block;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: block;
+}
+
+.gallery div {
+  height: 50px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--main-white);
+  background-color: var(--main-gary);
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.gallery a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    width: 90%;
+  }
+}
+.showall {
+  display: block;
+  height: 2em;
+  width: 150px;
+  line-height: 2em;
+  text-align: center;
+  background-color: var(--main-gary);
+  text-decoration: none;
+  color: var(--main-white);
+  margin: 0 auto 0 auto;
+  font-size: 1.5em;
+  transition: 0.2s ease;
+}
+
+.showall:hover {
+  background-color: var(--main-red);
+}
+
+.showall::after {
+  content: ">";
+  padding-left: 10px;
+}
+
+#contact {
+  background-color: var(--main-gary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em;
+  height: 80vh;
+}
+.contact_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--main-white);
+  margin: 0 auto 3em auto;
+}
+
+.contact_section h2 {
+  font-size: 3em;
+  letter-spacing: 3px;
+}
+
+.contact_section p {
+  font-style: italic;
+  font-size: 1.2em;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.contact_link ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contact_link li {
+  list-style-type: none;
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.contact_link li::before {
+  content: url("/src/img/instgram.svg");
+  vertical-align: middle;
+  filter: invert(1);
+}
+.contact_link a {
+  text-decoration: none;
+  color: var(--main-white);
+  font-size: 1.5em;
+}
+
+#footer {
+  background-color: var(--main-gary);
+  border-top: 3px solid var(--main-red);
+  padding: 40px 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: var(--main-white);
+}
+
+#footer div {
+  padding: 10px;
+}
