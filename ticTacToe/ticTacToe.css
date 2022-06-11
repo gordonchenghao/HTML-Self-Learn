@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * 0.9);
+  --background-color: #fff;
+  --board-color: #000;
+  --hover-color: lightgrey;
+  --winningPage-background-color:rgba(0,0,0,0.8);
+  --winningText-color:rgba(255, 255, 255, 0.8);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+}
+
+
+/* construct board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.cell {
+  height: var(--cell-size);
+  width: var(--cell-size);
+  border: 1px solid var(--board-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cell.x,
+.cell.circle{
+    cursor:not-allowed
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+/* construct X */
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover:before,
+.board.x .cell:not(.x):not(.circle):hover:after {
+  content: "";
+  position: absolute;
+  height: var(--mark-size);
+  width: calc(var(--mark-size) * 0.15);
+  background-color: var(--board-color);
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover:before {
+  transform: rotate(45deg);
+}
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover:after {
+  transform: rotate(-45deg);
+}
+
+.board.x .cell:not(.x):not(.circle):hover:before,
+.board.x .cell:not(.x):not(.circle):hover:after {
+  background-color: var(--hover-color);
+}
+
+/* construct circle */
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover:before,
+.board.circle .cell:not(.x):not(.circle):hover:after {
+  content: "";
+  position: absolute;
+  height: var(--mark-size);
+  width: var(--mark-size);
+  background-color: var(--board-color);
+  border-radius: 50%;
+}
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover:after {
+  background-color: var(--background-color);
+  height: calc(var(--mark-size) * 0.7);
+  width: calc(var(--mark-size) * 0.7);
+}
+
+.board.circle .cell:not(.x):not(.circle):hover:before {
+  background-color: var(--hover-color);
+}
+
+
+
+
+/* Winning Page */
+.winningPage {
+    background-color:var(--winningPage-background-color);
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.65s ease;
+}
+
+.winningPage.show {
+    display: flex;
+}
+/* winning text */
+.winningText {
+    font-size: 3rem;
+    color:var(--winningText-color);
+    margin-bottom: 1rem;
+}
+
+/* restart button */
+.restartButton {
+    font-size:2rem;
+    color:var(--winningPage-background-color);
+    background-color: var(--winningText-color);
+    border:1px solid var(--winningPage-background-color);
+    cursor:pointer;
+    padding:0.5rem;
+}
+
+.restartButton:hover {
+    color:var(--winningText-color);
+    background-color: var(--winningPage-background-color);
+    border-color: var(--winningText-color);
+}
+
+.restartButton:active {
+    transform: scale(0.98);
+}
+
