@@ -48,7 +48,7 @@ class Calculator {
       case "*":
         this.currentOperandNumber =
           this.previousOperandNumber * this.currentOperandNumber;
-        break;
+        break
       case "÷":
         this.currentOperandNumber =
           this.previousOperandNumber / this.currentOperandNumber;
@@ -58,6 +58,8 @@ class Calculator {
     }
 
     this.currentOperandText = this.currentOperandNumber.toString();
+    this.operator=undefined
+    this.previousOperandText=''
   }
 
   updateDisplay() {

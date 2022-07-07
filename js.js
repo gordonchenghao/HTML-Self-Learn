@@ -362,7 +362,8 @@ function displayDate() {
   function fun(value, key) {
     console.log(key, "=", value); //forEach()
   }
-  for (x of fruits.entries()) {//entries() return an iterator object with [key,values] in Map
+  for (x of fruits.entries()) {
+    //entries() return an iterator object with [key,values] in Map
     console.log(x);
   }
 }
@@ -370,30 +371,29 @@ function displayDate() {
 //type conversion
 {
   //convert string to number
-  a="1";
-  b="3.13"
-  console.log(typeof Number(a))//Number()
-  console.log(typeof +a)//Unary + operator
-  console.log(typeof parseFloat(b),parseFloat(b))//convert sting to float
-  console.log(typeof parseInt(b),parseInt(b))//convert string to int
-  
+  a = "1";
+  b = "3.13";
+  console.log(typeof Number(a)); //Number()
+  console.log(typeof +a); //Unary + operator
+  console.log(typeof parseFloat(b), parseFloat(b)); //convert sting to float
+  console.log(typeof parseInt(b), parseInt(b)); //convert string to int
+
   //convert number to string
-  a=1
-  console.log(typeof String(a))//String()
-  console.log(typeof a.toString(),a)//.toString()
+  a = 1;
+  console.log(typeof String(a)); //String()
+  console.log(typeof a.toString(), a); //.toString()
 
   //convert date to number
-  d=new Date()
-  console.log(d)
-  console.log(Number(d))//Number()
-  console.log(d.getTime())//.getTimes()
+  d = new Date();
+  console.log(d);
+  console.log(Number(d)); //Number()
+  console.log(d.getTime()); //.getTimes()
 
   //convert date to string
-  d=new Date()
-  console.log(d)
-  console.log(typeof String(d), String(d))//String()
-  console.log(typeof d.toString(),d.toString())//.toString()
-
-  
-
+  d = new Date();
+  console.log(d);
+  console.log(typeof String(d), String(d)); //String()
+  console.log(typeof d.toString(), d.toString()); //.toString()
 }
+
+

@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom, black, white);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.n1 {
+  transform: rotate(30deg);
+}
+.n2 {
+  transform: rotate(60deg);
+}
+
+.n3 {
+  transform: rotate(90deg);
+}
+
+.n4 {
+  transform: rotate(120deg);
+}
+
+.n5 {
+  transform: rotate(150deg);
+}
+
+.n6 {
+  transform: rotate(180deg);
+}
+
+.n7 {
+  transform: rotate(210deg);
+}
+
+.n8 {
+  transform: rotate(240deg);
+}
+
+.n9 {
+  transform: rotate(270deg);
+}
+
+.n10 {
+  transform: rotate(300deg);
+}
+
+.n11 {
+  transform: rotate(330deg);
+}
+
+.clockhand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform-origin: bottom;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.hour {
+  --rotation: 0;
+  background-color: black;
+  height: 30%;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 0;
+}
+
+.min {
+  --rotation: 0;
+  background-color: black;
+  height: 40%;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 1;
+}
+
+.sec {
+  --rotation: 0;
+  background-color: red;
+  height: 42%;
+  width: 3px;
+  transform: translate(-50%, -100%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 2;
+}
+
+.center {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 5%;
+  width: 5%;
+  background-color: black;
+  z-index: 3;
+}
+
+.digital {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    z-index: 4;
+    opacity: 0.5;
+    transition:opacity 1s ease;
+}
+.dim {
+    opacity:0.3;
+}

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --main-pink: #ff4c68;
+  --secondary-pink: #ef8172;
+  --description-grey: #8f8f8f;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+.container-fluid {
+  padding: 7% 15%;
+}
+
+section:nth-child(odd) {
+  background-color: var(--main-pink);
+  color: #fff;
+}
+
+/* Title */
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+#title h1 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+/*Navigation Bar*/
+.navbar {
+  padding: 0 0 4.5rem 0;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat";
+  font-weight: 300;
+}
+
+/* Download Button */
+.download-btn {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Image */
+.title-image-div {
+  position: relative;
+  min-height: 40vh;
+}
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  margin: 10% 0 0 20%;
+  position: absolute;
+  right: 30%;
+}
+
+/* Features*/
+#features {
+  background-color: #fff;
+  position: relative;
+}
+
+#features i {
+  color: var(--secondary-pink);
+  font-size: 4rem;
+  padding: 5% 0;
+}
+
+#features i:hover {
+  color: #ff4c68;
+}
+
+#features h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#features p {
+  color: var(--description-grey);
+}
+
+/* Testmonials */
+.testimonial-image {
+  width: 10%;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+#testimonials > img {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing */
+#pricing .pricing-col {
+  padding: 2% 3%;
+}
+
+#pricing .card p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Footer */
+#footer i {
+  font-size: 1.5rem;
+  margin: 5% 2%;
+  transition: transform 0.2s;
+}
+
+#footer i:hover {
+  transform: translateY(-3px) scale(1.2);
+}
+
+#footer p {
+  font-size: 1rem;
+  color: var(--description-grey);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  * {
+    text-align: center;
+  }
+
+  .title-image {
+    transform: rotate(0deg);
+    width: 70%;
+    position: static;
+    margin: auto;
+  }
+}
